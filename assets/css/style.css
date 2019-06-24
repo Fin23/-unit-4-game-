@@ -19,13 +19,11 @@
     height:145px;
     background-color: bisque;
 }
-
 #fight{
     height:100px;
     width:100px;
     font-size: 2em;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
 #fight:active {
     background-color: #3e8e41;
@@ -89,13 +87,11 @@ opacity: .6;
 #liukang:hover{
     opacity: .6;
 }
-
 #liukang:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
 .one{
     padding-top: 25px;
     padding-left: 500px;
@@ -103,7 +99,6 @@ opacity: .6;
 .container{
     background-color: blanchedalmond;
 }
-
 .hero-image  {
     background-image: url("../Images/mortalKombat.jpg");
    opacity: .85;

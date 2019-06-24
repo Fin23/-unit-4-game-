@@ -39,7 +39,6 @@
 	width: 49%; /* This div spans six columns (the entire row)*/
 	float: left;
     margin-left: 2%;
-    
 }
 .five {
 	width: 40.5%; /* This div spans five columns */
@@ -56,19 +55,14 @@
 	float:left;
 	margin-left: 2%;
 }
-
 .three2 {
-    
-	
 	float:left;
-    
     padding-left: 70px;
 }
 .two {
 	width: 15%;
 	float:left;
 	margin-left: 2%;
-
 }
 .one {
 	width: 6.5%;
@@ -81,7 +75,6 @@
 	padding: 0px;
 	margin: 0px;
 }
-
 /*additions to rows and columns */
 
 .hero-image-container {
@@ -106,20 +99,17 @@
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
-    
 }
 .content-3-columns2 {
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
-    
 }
 .left-column-home {
     background: #76232f;
     height: 350px;
     padding: 4px ;
     opacity: .8;
-
 }
 .middle-column-home {
     background: #76232f;
@@ -132,8 +122,6 @@
     height: 350px;
     padding: 4px;
     opacity: .8;
-
-    
 }
 .right-column-row3 {
  background: #d7cec7;
