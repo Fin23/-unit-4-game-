@@ -28,10 +28,17 @@ var liuKang = {
 //find hero area to put 1st clicked character in
 var heroArea = document.getElementById('hero-area')
 // function for button click to pick characters
-function buttonPress(){
-    
-    heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'160px\' height=\'145px\'>";
-  
+function buttonPress1(){
+    heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+}
+function buttonPress2(){
+    heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
+}
+function buttonPress3(){
+    heroArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
+}
+function buttonPress4(){
+    heroArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
 }
 
 
