@@ -18,7 +18,25 @@
     align-content: center;
     height:145px;
     background-color: bisque;
+    background-image: url(../Images/dragonLeft.JPG);
+    background-repeat: no-repeat;
 }
+.five2 {
+    border-style:solid;
+    margin-top: 370px;
+    align-content: center;
+    height:145px;
+    background-color: bisque;
+	width: 40.5%; /* This div spans five columns */
+    margin-right:45px;
+
+    float:right;
+    background-image: url(../Images/dragonRight.JPG);
+    background-repeat: no-repeat; 
+    background-position: right;
+    
+}
+
 #fight{
     height:100px;
     width:100px;
