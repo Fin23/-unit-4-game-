@@ -1,3 +1,20 @@
+.four{
+    padding-left: 170px;
+}
+.two2{
+    padding-left: 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    border-style:  solid;
+    width: 15%;
+	float:left;
+    margin-left: 2%;
+    background-color: bisque;
+}
+.five{
+    border-style:solid;
+}
+
 #fight{
     height:100px;
     width:100px;
@@ -10,11 +27,16 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+  #fight:hover{
+      opacity: .6;
+      color:aqua;
+      background-color:#e6080833;
+  }
 #raiden{
     background-image: url(../Images/raiden.jpg);
     height: 145px;
     width: 130px;
-    box-shadow: 0 8px 16px 0 #e6080833, 0 6px 20px 0 rgba(241, 5, 5, 0.19);
+    box-shadow: 0 8px 16px 0 aqua, 0 6px 20px 0 rgba(34, 140, 240, 0.19);
 }
 #raiden:hover{
     opacity: .6;
@@ -29,7 +51,7 @@
     background-image: url(../Images/scorpion.JPG);
     height: 145px;
     width: 130px;
-    box-shadow: 0 8px 16px 0 #e6080833, 0 6px 20px 0 rgba(241, 5, 5, 0.19);
+    box-shadow: 0 8px 16px 0 #f0c506e7, 0 6px 20px 0 rgba(241, 139, 5, 0.836);
 }
 #scorpion:hover{
     opacity: .6;
@@ -43,7 +65,7 @@
     background-image: url(../Images/sweetTooth.JPG);
     height: 145px;
     width: 130px;
-    box-shadow: 0 8px 16px 0 rgba(233, 4, 4, 0.2), 0 6px 20px 0 rgba(238, 7, 7, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(6, 216, 34, 0.897), 0 6px 20px 0 rgba(51, 236, 14, 0.884);
 }
 #sweettooth:hover{
 opacity: .6;
@@ -57,7 +79,7 @@ opacity: .6;
     background-image: url(../Images/liuKang.jpg);
     height: 145px;
     width: 130px;
-    box-shadow: 0 8px 16px 0 #e6080833, 0 6px 20px 0 rgba(241, 5, 5, 0.19);
+    box-shadow: 0 8px 16px 0 #f30303ea, 0 6px 20px 0 rgba(243, 6, 6, 0.979);
 }
 #liukang:hover{
     opacity: .6;
