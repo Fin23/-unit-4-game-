@@ -3,6 +3,7 @@
 }
 .two2{
     padding-left: 20px;
+    
     font-style: italic;
     font-size: 1.2em;
     border-style:  solid;
@@ -13,6 +14,10 @@
 }
 .five{
     border-style:solid;
+    margin-top: 370px;
+    align-content: center;
+    height:145px;
+    background-color: bisque;
 }
 
 #fight{
@@ -113,6 +118,6 @@ opacity: .6;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-250%, -50%);
     color: white;
 }
