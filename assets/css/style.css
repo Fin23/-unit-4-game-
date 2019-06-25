@@ -37,6 +37,18 @@
     background-position: right;
     
 }
+.innerFour {
+	width: 32%;
+	float:left;
+	margin-left: 4%;
+}
+.innerRow {
+	width: 100%;
+	clear: both; /* Clear creates new styles for the next row */
+    height: 145px;
+    margin: 0px;
+    padding-left: 170px;
+}
 
 #fight{
     height:100px;
@@ -126,6 +138,14 @@ opacity: .6;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */   
+}
+#hero-area{
+    height: 150px;
+    width: 200px;
+}
+#enemy-area{
+    height: 150px;
+    width: 200px;
 }
 .hero-text {
     text-align: center;
