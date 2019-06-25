@@ -22,7 +22,7 @@
     background-repeat: no-repeat;
     font-size: 2em;
 }
-.five2 {
+#five2 {
     border-style:solid;
     margin-top: 370px;
     align-content: center;
@@ -123,6 +123,32 @@ opacity: .6;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+  #evil-liukang{
+    background-image: url(../Images/liuKang.jpg);
+    height: 145px;
+    width: 130px;
+    box-shadow: 0 8px 16px 0 #f30303ea, 0 6px 20px 0 rgba(243, 6, 6, 0.979);
+}
+#evil-sweettooth{
+    background-image: url(../Images/sweetTooth.JPG);
+    height: 145px;
+    width: 130px;
+    box-shadow: 0 8px 16px 0 rgba(6, 216, 34, 0.897), 0 6px 20px 0 rgba(51, 236, 14, 0.884);
+}
+#evil-scorpion{
+    background-image: url(../Images/scorpion.JPG);
+    height: 145px;
+    width: 130px;
+    box-shadow: 0 8px 16px 0 #f0c506e7, 0 6px 20px 0 rgba(241, 139, 5, 0.836);
+}
+#evil-raiden{
+    background-image: url(../Images/raiden.jpg);
+    height: 145px;
+    width: 130px;
+    box-shadow: 0 8px 16px 0 aqua, 0 6px 20px 0 rgba(34, 140, 240, 0.19);
+}
+
+
 .one{
     padding-top: 25px;
     padding-left: 500px;
