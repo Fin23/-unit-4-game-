@@ -1,20 +1,23 @@
 var raiden = {
     raidenHealth: 200,
     raidenAttack: 50,
-    enemyHealth: 100,
-    enemyAttack: 10,
+    enemyRaidenHealth: 100,
+    enemyRaidenAttack: 20,
     whoRaiden: function(){
         console.log(this);
     },
     raidenStats:function(){
         console.log(this.raidenHealth + " " + this.raidenAttack);
+    },
+    enemyRaidenStats:function(){
+        console.log(this.enemyRaidenHealth + " " + this.enemyRaidenAttack);
     }
 };
 var scorpion = {
     scorpionHealth: 110,
     scorpionAttack: 20,
-    enemyHealth: 100,
-    enemyAttack: 10,
+    enemyScorpionHealth: 100,
+    enemyScorpionAttack: 10,
     whoScorpion: function(){
         console.log(this);
     },
@@ -25,8 +28,8 @@ var scorpion = {
 var sweetTooth = {
     sweetToothHealth: 130,
     sweetToothAttack: 10,
-    enemyHealth: 100,
-    enemyAttack: 10,
+    enemySweetToothHealth: 100,
+    enemySweetToothAttack: 10,
     whoSweetTooth: function(){
         console.log(this);
     },
@@ -37,8 +40,8 @@ var sweetTooth = {
 var liuKang = {
     liuKangHealth: 100,
     liuKangAttack: 45,
-    enemyHealth: 100,
-    enemyAttack: 10,
+    enemyLiuKangHealth: 100,
+    enemyLiuKangAttack: 10,
     whoIsLiuKang: function(){
         console.log(this);
     },
@@ -47,14 +50,20 @@ var liuKang = {
     }
 };
 
+var heroAttack = [];
+var enemyAttack = [];
+console.log(heroAttack);
+console.log(enemyAttack);
+
 //console logs all parts of the object
 raiden.whoRaiden();
 scorpion.whoScorpion();
 sweetTooth.whoSweetTooth();
 liuKang.whoIsLiuKang();
 
-//console logs hero stats
+//console logs hero stats and enemy stats
 raiden.raidenStats();
+raiden.enemyRaidenStats();
 scorpion.scorpionStats();
 sweetTooth.sweetToothStats();
 liuKang.liuKangStats();
@@ -79,6 +88,8 @@ function buttonPress1(){
     heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
+        heroAttack = raiden.raidenStats();
+
 }
 function buttonPress2(){
 heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
@@ -98,7 +109,8 @@ function buttonPress4(){
 // enemy buttons
 function buttonPress1E(){
     enemyArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
-        $("#evil-raiden").css({opacity:'0.0'});     
+        $("#evil-raiden").css({opacity:'0.0'}); 
+        enemyAttack = raiden.enemyRaidenStats();   
 }
 function buttonPress2E(){
 enemyArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
@@ -112,6 +124,10 @@ function buttonPress4E(){
     enemyArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-liukang").css({opacity:'0.0'});
 }
+
+$("#fight").on("click",function(){
+            alert("D.D.D.D.DUEL!!");
+});
 
 
 
