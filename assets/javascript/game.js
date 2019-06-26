@@ -3,26 +3,43 @@ var raiden = {
     raidenAttack: 10,
     enemyHealth: 100,
     enemyAttack: 10,
+    whoRaiden: function(){
+        console.log(this);
+    }
 }
 var scorpion = {
     scorpionHealth: 100,
     scorpionAttack: 10,
     enemyHealth: 100,
     enemyAttack: 10,
+    whoScorpion: function(){
+        console.log(this);
+    }
 }
 var sweetTooth = {
     sweetToothHealth: 100,
     sweetToothAttack: 10,
     enemyHealth: 100,
     enemyAttack: 10,
+    whoSweetTooth: function(){
+        console.log(this);
+    }
 }
 var liuKang = {
     liuKangHealth: 100,
     liuKangAttack: 10,
     enemyHealth: 100,
     enemyAttack: 10,
+    whoIsLiuKang: function(){
+        console.log(this);
+    }
 }
+raiden.whoRaiden();
+scorpion.whoScorpion();
+sweetTooth.whoSweetTooth();
+liuKang.whoIsLiuKang();
 
+    console.log(this)
 
 
 //Dom manipulation
@@ -41,43 +58,52 @@ var showTextContent = enemyStats.textContent;
 // function for button click to pick characters and insert into hero area
 function buttonPress1(){
     heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
-        $("#enemy-health").css({opacity:'0.0'});
-        $("#enemy-attack").css({opacity:'0.0'});
-        $("#raiden").css({opacity:'0.0'});
-        $("#scorpion").css({opacity:'0.0'});
-        $("#liukang").css({opacity:'0.0'});
-        $("#sweettooth").css({opacity:'0.0'})
+        $("#enemy-health, #enemy-attack, #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
+        $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
+     
 }
 function buttonPress2(){
 heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
-    $("#enemy-health").css({opacity:'0.0'});
-    $("#enemy-attack").css({opacity:'0.0'});
-    $("#sweettooth").css({opacity:'0.0'});
-    $("#raiden").css({opacity:'1.0'});
-    $("#scorpion").css({opacity:'1.0'});
-    $("#liukang").css({opacity:'1.0'}); 
+    $("#enemy-health, #enemy-attack, #sweettooth, #raiden, #scorpion, #liukang, #evil-sweettooth").css({opacity:'0.0'});
+    $("#evil-raiden, #evil-liukang, #evil-scorpion").css({opacity:'1.0'});
+   
 }
 function buttonPress3(){
     heroArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
-    $("#enemy-health").css({opacity:'0.0'});
-    $("#enemy-attack").css({opacity:'0.0'});
-    $("#scorpion").css({opacity:'0.0'});
-    $("#liukang").css({opacity:'1.0'});
-    $("#sweettooth").css({opacity:'1.0'});
-    $("#raiden").css({opacity:'1.0'});
+    $("#enemy-health, #enemy-attack, #scorpion, #liukang, #sweettooth, #raiden, #evil-scorpion").css({opacity:'0.0'});
+    $("#evil-raiden, #evil-liukang, #evil-sweettooth").css({opacity:'1.0'});
+ 
 }
 function buttonPress4(){
     heroArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
-    $("#enemy-health").css({opacity:'0.0'});
-    $("#enemy-attack").css({opacity:'0.0'});
-    $("#liukang").css({opacity:'0.0'});
-    $("#sweettooth").css({opacity:'1.0'});
-    $("#raiden").css({opacity:'1.0'});
-    $("#scorpion").css({opacity:'1.0'});
+    $("#enemy-health, #enemy-attack, #liukang, #sweettooth, #raiden, #scorpion, #evil-liukang").css({opacity:'0.0'});
+    $("#evil-raiden, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
+    // 
 }
-// if(buttonPress1()){
-//     heroArea.
-// }
+// enemy buttons
+function buttonPress1E(){
+    enemyArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+        $("#enemy-health, #enemy-attack, #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
+     
+}
+function buttonPress2E(){
+enemyArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
+    $("#enemy-health, #enemy-attack, #sweettooth, #evil-sweettooth").css({opacity:'0.0'});
+    $(" ").css({opacity:'1.0'});
+   
+}
+function buttonPress3E(){
+    enemyArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
+    $("#enemy-health, #enemy-attack, #scorpion, #evil-scorpion").css({opacity:'0.0'});
+    $(" ").css({opacity:'1.0'});
+ 
+}
+function buttonPress4E(){
+    enemyArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
+    $("#enemy-health, #enemy-attack, #liukang, #evil-liukang").css({opacity:'0.0'});
+    $(" ").css({opacity:'1.0'});
+    // 
+}
 
 
 
