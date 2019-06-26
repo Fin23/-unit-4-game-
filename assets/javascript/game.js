@@ -100,7 +100,8 @@ function buttonPress1(){
     heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
-        heroAttack = raiden.raidenStats();
+        raiden.raidenStats();
+       
 
 }
 function buttonPress2(){
