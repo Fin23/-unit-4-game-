@@ -59,8 +59,10 @@ var liuKang = {
     }
 };
 
-var heroAttack = [];
-var enemyAttack = [];
+var heroAttack = [50, 20, 10, 45];
+var heroHealth =[];
+var enemyAttack = [20, 30, 70, 10];
+var enemyHealth = [100, 160, 150, 100];
 console.log(heroAttack);
 console.log(enemyAttack);
 
@@ -101,6 +103,12 @@ function buttonPress1(){
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
         raiden.raidenStats();
+       //raiden.raidenHealth;
+ 
+    let heroHealth =[raiden.raidenHealth, raiden.raidenAttack];
+      console.log(heroHealth);
+  
+        
        
 
 }
@@ -109,18 +117,27 @@ heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'
     $("#sweettooth, #raiden, #scorpion, #liukang, #evil-sweettooth").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-scorpion").css({opacity:'1.0'});
     heroAttack = sweetTooth.sweetToothStats();
+ 
+  let heroHealth =[sweetTooth.sweetToothHealth, sweetTooth.sweetToothAttack];
+    console.log(heroHealth);
 }
 function buttonPress3(){
     heroArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
     $("#scorpion, #liukang, #sweettooth, #raiden, #evil-scorpion").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-sweettooth").css({opacity:'1.0'});
     heroAttack = scorpion.scorpionStats();
+    
+  let heroHealth =[scorpion.scorpionHealth, scorpion.scorpionAttack];
+    console.log(heroHealth);
 }
 function buttonPress4(){
     heroArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#liukang, #sweettooth, #raiden, #scorpion, #evil-liukang").css({opacity:'0.0'});
     $("#evil-raiden, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'}); 
     heroAttack = liuKang.liuKangStats();
+   
+  let heroHealth =[liuKang.liuKangHealth, liuKang.liuKangAttack];
+    console.log(heroHealth);
 }
 // enemy buttons
 function buttonPress1E(){
