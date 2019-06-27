@@ -59,31 +59,31 @@ var liuKang = {
     }
 };
 
-var heroAttack = [50, 20, 10, 45];
-var heroHealth =[];
-var enemyAttack = [20, 30, 70, 10];
-var enemyHealth = [100, 160, 150, 100];
-console.log(heroAttack);
-console.log(enemyAttack);
+var heroHealthAttack = [];
+var newHeroHealth = [];
+var newHeroAttack = [];
+var enemyHealthAttack = [];
+var newEnemyHealth = [];
+var newEnemyAttack = [];
+
 
 //console logs all parts of the object
-raiden.whoRaiden();
-scorpion.whoScorpion();
-sweetTooth.whoSweetTooth();
-liuKang.whoIsLiuKang();
+ raiden.whoRaiden();
+ scorpion.whoScorpion();
+ sweetTooth.whoSweetTooth();
+ liuKang.whoIsLiuKang();
 
 //console logs hero stats and enemy stats
-raiden.raidenStats();
-raiden.enemyRaidenStats();
-scorpion.scorpionStats();
-scorpion.enemyScorpionStats();
-sweetTooth.sweetToothStats();
-sweetTooth.sweetToothStats();
-liuKang.liuKangStats();
-liuKang.liuKangStats();
+// raiden.raidenStats();
+// raiden.enemyRaidenStats();
+// scorpion.scorpionStats();
+// scorpion.enemyScorpionStats();
+// sweetTooth.sweetToothStats();
+// sweetTooth.sweetToothStats();
+// liuKang.liuKangStats();
+// liuKang.liuKangStats();
 
     console.log(this)
-
 
 //Dom manipulation
 //find hero area to put 1st clicked character in
@@ -99,70 +99,95 @@ var enemyStats = document.getElementById('enemy-stats');
 
 // function for button click to pick characters and insert into hero area
 function buttonPress1(){
-    heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+        heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
         raiden.raidenStats();
-       //raiden.raidenHealth;
- 
-    let heroHealth =[raiden.raidenHealth, raiden.raidenAttack];
-      console.log(heroHealth);
-  
-        
-       
-
+        heroHealthAttack.push(raiden.raidenHealth, raiden.raidenAttack);
+        // let heroHealthAttack =[raiden.raidenHealth, raiden.raidenAttack];
+         //console.log(heroHealthAttack);
 }
 function buttonPress2(){
-heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
+    heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
     $("#sweettooth, #raiden, #scorpion, #liukang, #evil-sweettooth").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-scorpion").css({opacity:'1.0'});
-    heroAttack = sweetTooth.sweetToothStats();
- 
-  let heroHealth =[sweetTooth.sweetToothHealth, sweetTooth.sweetToothAttack];
-    console.log(heroHealth);
+    sweetTooth.sweetToothStats();
+    heroHealthAttack.push(sweetTooth.sweetToothHealth, sweetTooth.sweetToothAttack);
+    //let heroHealthAttack =[sweetTooth.sweetToothHealth, sweetTooth.sweetToothAttack];
+    //console.log(heroHealthAttack);
 }
 function buttonPress3(){
     heroArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
     $("#scorpion, #liukang, #sweettooth, #raiden, #evil-scorpion").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-sweettooth").css({opacity:'1.0'});
-    heroAttack = scorpion.scorpionStats();
-    
-  let heroHealth =[scorpion.scorpionHealth, scorpion.scorpionAttack];
-    console.log(heroHealth);
+    scorpion.scorpionStats();
+     heroHealthAttack.push(scorpion.scorpionHealth, scorpion.scorpionAttack);
+    //console.log(heroHealthAttack);
 }
 function buttonPress4(){
     heroArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#liukang, #sweettooth, #raiden, #scorpion, #evil-liukang").css({opacity:'0.0'});
     $("#evil-raiden, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'}); 
     heroAttack = liuKang.liuKangStats();
-   
-  let heroHealth =[liuKang.liuKangHealth, liuKang.liuKangAttack];
-    console.log(heroHealth);
+    heroHealthAttack.push(liuKang.liuKangHealth, liuKang.liuKangAttack);
+    //console.log(heroHealthAttack);
 }
 // enemy buttons
 function buttonPress1E(){
-    enemyArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+        enemyArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $("#evil-raiden").css({opacity:'0.0'}); 
-        enemyAttack = raiden.enemyRaidenStats();   
+        enemyAttack = raiden.enemyRaidenStats();  
+        enemyHealthAttack.push(raiden.enemyRaidenHealth, raiden.enemyRaidenAttack);
+        //console.log(enemyHealthAttack);
 }
 function buttonPress2E(){
 enemyArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-sweettooth").css({opacity:'0.0'});
-    enemyAttack = sweetTooth.enemySweetToothStats();  
+    enemyAttack = sweetTooth.enemySweetToothStats(); 
+    enemyHealthAttack.push(sweetTooth.enemySweetToothHealth, sweetTooth.enemySweetToothAttack);
+    //console.log(enemyHealthAttack);
 }
 function buttonPress3E(){
     enemyArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-scorpion").css({opacity:'0.0'});
     enemyAttack = scorpion.enemyScorpionStats();  
+    enemyHealthAttack.push(scorpion.enemyScorpionHealth, scorpion.enemyScorpionAttack);
+    //console.log(enemyHealthAttack);
 }
 function buttonPress4E(){
     enemyArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-liukang").css({opacity:'0.0'});
     enemyAttack = liuKang.enemyLiuKangStats();  
+    enemyHealthAttack.push(liuKang.enemyLiuKangHealth, liuKang.enemyLiuKangAttack);
+    //console.log(enemyHealthAttack);
 }
 
 $("#fight").on("click",function(){
             alert("D.D.D.D.DUEL!!");
+            //when click fight take the enemy health (a1)and subtract hero attack(b1), then vise versa
+            //hero health(a2) minus enemy health (b2)
+           
+
+     newEnemyHealth =  (enemyHealthAttack[0] - heroHealthAttack[1]);
+     
+     if(newEnemyHealth > 0){
+        (enemyHealthAttack[0] - heroHealthAttack[1]);
+        
+     }else{
+         alert("lose")
+     }
+           
+     console.log(newEnemyHealth);
+            console.log(heroHealthAttack);
+            console.log(enemyHealthAttack);
+                
+            
+
+             
+            
+
+            // heroHealthAttack [a2, b1]
+            // enemyHealthAttack [a1, b2]
 });
 
 
