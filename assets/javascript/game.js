@@ -32,7 +32,7 @@ var sweetTooth = {
     sweetToothHealth: 130,
     sweetToothAttack: 10,
     enemySweetToothHealth: 150,
-    enemySweetToothAttack: 70,
+    enemySweetToothAttack: 60,
     whoSweetTooth: function(){
         console.log(this);
     },
@@ -46,7 +46,7 @@ var sweetTooth = {
 var liuKang = {
     liuKangHealth: 100,
     liuKangAttack: 45,
-    enemyLiuKangHealth: 100,
+    enemyLiuKangHealth: 20,
     enemyLiuKangAttack: 200,
     whoIsLiuKang: function(){
         console.log(this);
@@ -183,11 +183,14 @@ $("#fight").on("click",function(){
             //alert("D.D.D.D.DUEL!!");
             //when click fight take the enemy health (a1)and subtract hero attack(b1), then vise versa
             //hero health(a2) minus enemy health (b2)
-           console.log(heroHealth);
-           console.log(heroAttack);
-           console.log(enemyHealth);
-           console.log(enemyAttack);
-     //newEnemyHealth =  (enemyHealthAttack[0] - heroHealthAttack[1]);
+        //    console.log(heroHealth);
+        //    console.log(heroAttack);
+        //    console.log(enemyHealth);
+        //    console.log(enemyAttack);
+     newEnemyHealth =  (enemyHealth[0] - heroAttack[0]);
+     newHeroHealth = (heroHealth[0] - enemyAttack[0] );
+     console.log(newEnemyHealth);
+     console.log(newHeroHealth);
     //newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
     //alert("you attacked" )
     //console.log(newEnemyHealth);
