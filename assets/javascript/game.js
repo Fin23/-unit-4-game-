@@ -179,7 +179,7 @@ function buttonPress4E(){
 
 
 
-$("#fight").on("click",function(){
+//$("#fight").on("click",function(){
             //alert("D.D.D.D.DUEL!!");
             //when click fight take the enemy health (a1)and subtract hero attack(b1), then vise versa
             //hero health(a2) minus enemy health (b2)
@@ -187,13 +187,26 @@ $("#fight").on("click",function(){
         //    console.log(heroAttack);
         //    console.log(enemyHealth);
         //    console.log(enemyAttack);
-        var i;
-     for(i = 0; i < 2; i++){
-            newEnemyHealth =  (enemyHealth[0] - heroAttack[0]);
+    
+        $("#fight").on("click",function(){
+            
+            //var msg = '';
+           for(i = 1; i < 3; i++){
+           //do {
+           newEnemyHealth =  (enemyHealth[0] - heroAttack[0]);
             newHeroHealth = (heroHealth[0] - enemyAttack[0] );
-     }
-     console.log(newEnemyHealth);
-     console.log(newHeroHealth);
+           }
+           // } //while (i<2);
+            //testing
+                
+            console.log(newEnemyHealth);
+            console.log(newHeroHealth);
+            //break;
+        
+    
+     });
+    //  console.log(newEnemyHealth);
+    //  console.log(newHeroHealth);
     //newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
     //alert("you attacked" )
     //console.log(newEnemyHealth);
@@ -202,7 +215,7 @@ $("#fight").on("click",function(){
                
             //console.log(heroHealthAttack);
              //console.log(enemyHealthAttack);
-});
+
          
 
 
