@@ -59,12 +59,15 @@ var liuKang = {
     }
 };
 
-var heroHealthAttack = [];
-var newHeroHealth = [];
-var newHeroAttack = [];
-var enemyHealthAttack = [];
-var newEnemyHealth = [];
-var newEnemyAttack = [];
+var heroHealth = [];
+var heroAttack = [];
+
+var enemyHealth = [];
+var enemyAttack = [];
+
+//var newNewEnemyHealth = [];
+
+
 
 
 //console logs all parts of the object
@@ -91,6 +94,12 @@ var heroArea = document.getElementById('hero-area');
 var enemyArea = document.getElementById('enemy-area')
 var heroStats = document.getElementById('hero-stats');
 var enemyStats = document.getElementById('enemy-stats');
+var heroHealthDisplay = document.getElementById('hero-health');
+var heroAttackDisplay = document.getElementById('hero-attack');
+var enemyHealthDisplay = document.getElementById('enemy-health');
+var enemyAttackDisplay = document.getElementById('enemy-attack');
+//"save" origianal attack value
+
 
 
 
@@ -102,98 +111,93 @@ function buttonPress1(){
         heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
-        raiden.raidenStats();
-        heroHealthAttack.push(raiden.raidenHealth, raiden.raidenAttack);
-        // let heroHealthAttack =[raiden.raidenHealth, raiden.raidenAttack];
-         //console.log(heroHealthAttack);
+        heroHealth.push(raiden.raidenHealth)
+        heroAttack.push(raiden.raidenAttack)
+        heroHealthDisplay.innerHTML =("hero health:" + raiden.raidenHealth );
+        heroAttackDisplay.innerHTML=("hero attack:" + raiden.raidenAttack);
 }
 function buttonPress2(){
     heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
     $("#sweettooth, #raiden, #scorpion, #liukang, #evil-sweettooth").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-scorpion").css({opacity:'1.0'});
-    sweetTooth.sweetToothStats();
-    heroHealthAttack.push(sweetTooth.sweetToothHealth, sweetTooth.sweetToothAttack);
-    //let heroHealthAttack =[sweetTooth.sweetToothHealth, sweetTooth.sweetToothAttack];
-    //console.log(heroHealthAttack);
+    heroHealth.push(sweetTooth.sweetToothHealth);
+    heroAttack.push(sweetTooth.sweetToothAttack);
+    heroHealthDisplay.innerHTML =("hero health:" + sweetTooth.sweetToothHealth );
+    heroAttackDisplay.innerHTML=("hero attack:" + sweetTooth.sweetToothAttack);
 }
 function buttonPress3(){
     heroArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
     $("#scorpion, #liukang, #sweettooth, #raiden, #evil-scorpion").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-sweettooth").css({opacity:'1.0'});
-    scorpion.scorpionStats();
-     heroHealthAttack.push(scorpion.scorpionHealth, scorpion.scorpionAttack);
-    //console.log(heroHealthAttack);
+    heroHealth.push(scorpion.scorpionHealth);
+    heroAttack.push(scorpion.scorpionAttack);
+     heroHealthDisplay.innerHTML =("hero health:" + scorpion.scorpionHealth );
+     heroAttackDisplay.innerHTML=("hero attack:" + scorpion.scorpionAttack);
 }
 function buttonPress4(){
     heroArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#liukang, #sweettooth, #raiden, #scorpion, #evil-liukang").css({opacity:'0.0'});
     $("#evil-raiden, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'}); 
-    heroAttack = liuKang.liuKangStats();
-    heroHealthAttack.push(liuKang.liuKangHealth, liuKang.liuKangAttack);
-    //console.log(heroHealthAttack);
+    heroHealth.push(liuKang.liuKangHealth);
+    heroAttack.push(liuKang.liuKangAttack);
+    heroHealthDisplay.innerHTML =("hero health:" + liuKang.liuKangHealth );
+    heroAttackDisplay.innerHTML=("hero attack:" + liuKang.liuKangAttack);
 }
 // enemy buttons
 function buttonPress1E(){
         enemyArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $("#evil-raiden").css({opacity:'0.0'}); 
-        enemyAttack = raiden.enemyRaidenStats();  
-        enemyHealthAttack.push(raiden.enemyRaidenHealth, raiden.enemyRaidenAttack);
-        //console.log(enemyHealthAttack);
+        enemyHealth.push(raiden.enemyRaidenHealth);
+        enemyAttack.push(raiden.enemyRaidenAttack);  
+        enemyHealthDisplay.innerHTML =("enemy health:" + raiden.enemyRaidenHealth );
+        enemyAttackDisplay.innerHTML=("enemy attack:" + raiden.enemyRaidenAttack);
 }
 function buttonPress2E(){
 enemyArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
-    $("#evil-sweettooth").css({opacity:'0.0'});
-    enemyAttack = sweetTooth.enemySweetToothStats(); 
-    enemyHealthAttack.push(sweetTooth.enemySweetToothHealth, sweetTooth.enemySweetToothAttack);
-    //console.log(enemyHealthAttack);
+    $("#evil-sweettooth").css({opacity:'0.0'}); 
+    enemyHealth.push(sweetTooth.enemySweetToothHealth);
+    enemyAttack.push(sweetTooth.enemySweetToothAttack);
+    enemyHealthDisplay.innerHTML =("enemy health:" + sweetTooth.enemySweetToothHealth );
+    enemyAttackDisplay.innerHTML=("enemy attack:" + sweetTooth.enemySweetToothAttack); 
 }
 function buttonPress3E(){
     enemyArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
-    $("#evil-scorpion").css({opacity:'0.0'});
-    enemyAttack = scorpion.enemyScorpionStats();  
-    enemyHealthAttack.push(scorpion.enemyScorpionHealth, scorpion.enemyScorpionAttack);
-    //console.log(enemyHealthAttack);
+    $("#evil-scorpion").css({opacity:'0.0'}); 
+    enemyHealth.push(scorpion.enemyScorpionHealth);
+    enemyAttack.push(scorpion.enemyScorpionAttack);  
+    enemyHealthDisplay.innerHTML =("enemy health:" + scorpion.enemyScorpionHealth );
+    enemyAttackDisplay.innerHTML=("enemy attack:" + scorpion.enemyScorpionAttack); 
 }
 function buttonPress4E(){
     enemyArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
-    $("#evil-liukang").css({opacity:'0.0'});
-    enemyAttack = liuKang.enemyLiuKangStats();  
-    enemyHealthAttack.push(liuKang.enemyLiuKangHealth, liuKang.enemyLiuKangAttack);
-    //console.log(enemyHealthAttack);
+    $("#evil-liukang").css({opacity:'0.0'});  
+    enemyHealth.push(liuKang.enemyLiuKangHealth);
+    enemyAttack.push(liuKang.enemyLiuKangAttack);
+    enemyHealthDisplay.innerHTML =("enemy health:" + liuKang.enemyLiuKangHealth );
+    enemyAttackDisplay.innerHTML=("enemy attack:" + liuKang.enemyLiuKangAttack);
 }
+
+
 
 $("#fight").on("click",function(){
-            alert("D.D.D.D.DUEL!!");
+            //alert("D.D.D.D.DUEL!!");
             //when click fight take the enemy health (a1)and subtract hero attack(b1), then vise versa
             //hero health(a2) minus enemy health (b2)
-           
-
+           console.log(heroHealth);
+           console.log(heroAttack);
+           console.log(enemyHealth);
+           console.log(enemyAttack);
      //newEnemyHealth =  (enemyHealthAttack[0] - heroHealthAttack[1]);
-    newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
-    
-     
-     if(){
-         $("#fight").on("click", function(){
+    //newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
+    //alert("you attacked" )
+    //console.log(newEnemyHealth);
+            //console.log(newHeroHealth);
 
-        enemyHealthAttack[0] - heroHealthAttack[1];
-        console.log(newEnemyHealth);
-}
-         )}else{
-         alert("lose")
-     }
-           console.log(newHeroHealth);
-     
-            console.log(heroHealthAttack);
-            console.log(enemyHealthAttack);
-                
-            
-
-             
-            
-
-            // heroHealthAttack [a2, b1]
-            // enemyHealthAttack [a1, b2]
+               
+            //console.log(heroHealthAttack);
+             //console.log(enemyHealthAttack);
 });
+         
 
 
 
