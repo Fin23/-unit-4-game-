@@ -187,8 +187,11 @@ $("#fight").on("click",function(){
         //    console.log(heroAttack);
         //    console.log(enemyHealth);
         //    console.log(enemyAttack);
-     newEnemyHealth =  (enemyHealth[0] - heroAttack[0]);
-     newHeroHealth = (heroHealth[0] - enemyAttack[0] );
+        var i;
+     for(i = 0; i < 2; i++){
+            newEnemyHealth =  (enemyHealth[0] - heroAttack[0]);
+            newHeroHealth = (heroHealth[0] - enemyAttack[0] );
+     }
      console.log(newEnemyHealth);
      console.log(newHeroHealth);
     //newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
