@@ -47,7 +47,7 @@ var liuKang = {
     liuKangHealth: 100,
     liuKangAttack: 45,
     enemyLiuKangHealth: 100,
-    enemyLiuKangAttack: 10,
+    enemyLiuKangAttack: 200,
     whoIsLiuKang: function(){
         console.log(this);
     },
@@ -168,16 +168,21 @@ $("#fight").on("click",function(){
             //hero health(a2) minus enemy health (b2)
            
 
-     newEnemyHealth =  (enemyHealthAttack[0] - heroHealthAttack[1]);
+     //newEnemyHealth =  (enemyHealthAttack[0] - heroHealthAttack[1]);
+    newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
+    
      
-     if(newEnemyHealth > 0){
-        (enemyHealthAttack[0] - heroHealthAttack[1]);
-        
-     }else{
+     if(){
+         $("#fight").on("click", function(){
+
+        enemyHealthAttack[0] - heroHealthAttack[1];
+        console.log(newEnemyHealth);
+}
+         )}else{
          alert("lose")
      }
-           
-     console.log(newEnemyHealth);
+           console.log(newHeroHealth);
+     
             console.log(heroHealthAttack);
             console.log(enemyHealthAttack);
                 
