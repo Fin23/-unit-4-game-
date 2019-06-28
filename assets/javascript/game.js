@@ -65,6 +65,8 @@ var heroAttack = [];
 var enemyHealth = [];
 var enemyAttack = [];
 
+
+
 //var newNewEnemyHealth = [];
 
 
@@ -183,30 +185,59 @@ function buttonPress4E(){
             //alert("D.D.D.D.DUEL!!");
             //when click fight take the enemy health (a1)and subtract hero attack(b1), then vise versa
             //hero health(a2) minus enemy health (b2)
-        //    console.log(heroHealth);
-        //    console.log(heroAttack);
-        //    console.log(enemyHealth);
-        //    console.log(enemyAttack);
+            console.log(heroHealth);
+            console.log(heroAttack);
+           console.log(enemyHealth);
+           console.log(enemyAttack);
     
-        $("#fight").on("click",function(){
+      //  $("#fight").on("click",battle1(){
+            //console.log(battle1())
+       // }
+       var turnCounter = 1;
+        var killCount = 0;
+
+     $("#fight").on("click", function(){
+        var newEnemyHealth=(enemyHealth[0] - heroAttack[0]);
+        var newHeroHealth=(heroHealth[0] - enemyAttack[0] );
+        if (newEnemyHealth === 0 || newHeroHealth === 0){
+          turnCounter++
             
-            //var msg = '';
-           for(i = 1; i < 3; i++){
-           //do {
-           newEnemyHealth =  (enemyHealth[0] - heroAttack[0]);
-            newHeroHealth = (heroHealth[0] - enemyAttack[0] );
-           }
-           // } //while (i<2);
-            //testing
-                
-            console.log(newEnemyHealth);
-            console.log(newHeroHealth);
-            //break;
-        
+        }else {
+            $("#fight").on("click", function(){
+                (enemyHealth[0] - heroAttack[0]);
+                (heroHealth[0] - enemyAttack[0]);
+                turnCounter++
+                console.log(newEnemyHealth);
+                console.log(newHeroHealth);
+                console.log(turnCounter);
+                console.log(killCount);
+
+            });
+            
+        }
+    });
+
     
-     });
-    //  console.log(newEnemyHealth);
-    //  console.log(newHeroHealth);
+
+     
+            //var msg = '';
+        //    for(i = 0; i < 3; i++){
+        
+          //function battle1(){
+           
+
+
+        //     if (newEnemyHealth||newHeroHealth = 0){
+        //         console.log(death)
+        //     }
+        //    }
+                
+        //     console.log(enemyHealth[0] - heroAttack[0]);
+        //     console.log(heroHealth[0] - enemyAttack[0]);
+           
+     //});
+      //console.log(newEnemyHealth);
+     //console.log(newHeroHealth);
     //newHeroHealth = (heroHealthAttack[0] - enemyHealthAttack[1]);
     //alert("you attacked" )
     //console.log(newEnemyHealth);
