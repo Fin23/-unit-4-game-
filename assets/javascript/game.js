@@ -193,29 +193,78 @@ function buttonPress4E(){
       //  $("#fight").on("click",battle1(){
             //console.log(battle1())
        // }
-       var turnCounter = 1;
+       var turnCounter = 0;
         var killCount = 0;
-
-     $("#fight").on("click", function(){
         var newEnemyHealth=(enemyHealth[0] - heroAttack[0]);
         var newHeroHealth=(heroHealth[0] - enemyAttack[0] );
-        if (newEnemyHealth === 0 || newHeroHealth === 0){
-          turnCounter++
-            
-        }else {
-            $("#fight").on("click", function(){
-                (enemyHealth[0] - heroAttack[0]);
-                (heroHealth[0] - enemyAttack[0]);
-                turnCounter++
-                console.log(newEnemyHealth);
-                console.log(newHeroHealth);
-                console.log(turnCounter);
-                console.log(killCount);
 
-            });
+        // var newNewEnemyHealth = (newEnemyHealth - heroAttack[0]);
+        // var newNewHeroHealth = (newHeroHealth - enemyAttack[0]);
+
+        // var newNewNewEnemyHealth = (newNewEnemyHealth - heroAttack[0]);
+        // var newNewNewHeroHealth = (newNewHeroHealth - enemyAttack[0]);
+
+     $("#fight").on("click", function(){
+        var newEnemyHealth = (enemyHealth[0] - heroAttack[0]);
+         var newHeroHealth = (heroHealth[0] - enemyAttack[0] );
+        console.log(newEnemyHealth, newHeroHealth);
+        turnCounter++
+        console.group(turnCounter);
+        console.log(killCount);
+
+                    $("#fight").off('click');
+    
+                  
+                   $("#fight").on("click", function(){
+                            var  newNewEnemyHealth = (newEnemyHealth - heroAttack[0]);
+                            var newNewHeroHealth = (newHeroHealth - enemyAttack[0]);
+                             turnCounter++
+                             console.log(newNewEnemyHealth, newNewHeroHealth);
+                             console.log(turnCounter);
+                             console.log(killCount);
+                             $("#fight").off('click');
+                            
+                   
+                   $("#fight").on("click", function(){
+                                newNewNewEnemyHealth = (newNewEnemyHealth - heroAttack[0]);
+                                newNewNewHeroHealth = (newNewHeroHealth - enemyAttack[0]);
+                                $("#fight").off('click');
+                                turnCounter++
+                                console.log(newNewNewEnemyHealth, newNewNewHeroHealth);
+                                console.log(turnCounter);
+                                console.log(killCount);
+                   })
+                             
+                    }) 
+
+                     })
+        
+        
+    
+        
+     
+        // if (newEnemyHealth === 0 || newHeroHealth === 0){
+        //     alert("death")
+         
             
-        }
-    });
+        // }else if (newEnemyHealth > 0 || newHeroHealth > 0){
+        //     $("#fight").on("click", function(){
+        //       newNewEnemyHealth = (newEnemyHealth - heroAttack[0]);
+        //         newNewHeroHealth = (newHeroHealth - enemyAttack[0]);
+        //         turnCounter++
+        //         killCount++
+        //         console.log(newNewEnemyHealth, newNewHeroHealth);
+        //         console.log(turnCounter);
+        //         console.log(killCount);
+        //     } else  {
+        //         new3EnemyHealth = (newNewEnemyHealth - heroAttack[0]);
+        //         new3HeroHealth = (newNewHeroHealth - enemyAttack[0]);
+            
+        //     }
+        // };
+            
+        
+     //});
 
     
 
