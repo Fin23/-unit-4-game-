@@ -110,7 +110,7 @@ var enemyAttackDisplay = document.getElementById('enemy-attack');
 
 // function for button click to pick characters and insert into hero area
 function buttonPress1(){
-        heroArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+        heroArea.innerHTML = "<img src='assets/Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
         heroHealth.push(raiden.raidenHealth)
@@ -119,7 +119,7 @@ function buttonPress1(){
         heroAttackDisplay.innerHTML=("hero attack:" + raiden.raidenAttack);
 }
 function buttonPress2(){
-    heroArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
+    heroArea.innerHTML = "<img src='assets/Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
     $("#sweettooth, #raiden, #scorpion, #liukang, #evil-sweettooth").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-scorpion").css({opacity:'1.0'});
     heroHealth.push(sweetTooth.sweetToothHealth);
@@ -128,7 +128,7 @@ function buttonPress2(){
     heroAttackDisplay.innerHTML=("hero attack:" + sweetTooth.sweetToothAttack);
 }
 function buttonPress3(){
-    heroArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
+    heroArea.innerHTML = "<img src='assets/Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
     $("#scorpion, #liukang, #sweettooth, #raiden, #evil-scorpion").css({opacity:'0.0'});
     $("#evil-raiden, #evil-liukang, #evil-sweettooth").css({opacity:'1.0'});
     heroHealth.push(scorpion.scorpionHealth);
@@ -137,7 +137,7 @@ function buttonPress3(){
      heroAttackDisplay.innerHTML=("hero attack:" + scorpion.scorpionAttack);
 }
 function buttonPress4(){
-    heroArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
+    heroArea.innerHTML = "<img src='assets/Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#liukang, #sweettooth, #raiden, #scorpion, #evil-liukang").css({opacity:'0.0'});
     $("#evil-raiden, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'}); 
     heroHealth.push(liuKang.liuKangHealth);
@@ -147,7 +147,7 @@ function buttonPress4(){
 }
 // enemy buttons
 function buttonPress1E(){
-        enemyArea.innerHTML = "<img src='Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+        enemyArea.innerHTML = "<img src='assets/Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
         $("#evil-raiden").css({opacity:'0.0'}); 
         enemyHealth.push(raiden.enemyRaidenHealth);
         enemyAttack.push(raiden.enemyRaidenAttack);  
@@ -155,7 +155,7 @@ function buttonPress1E(){
         enemyAttackDisplay.innerHTML=("enemy attack:" + raiden.enemyRaidenAttack);
 }
 function buttonPress2E(){
-enemyArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
+enemyArea.innerHTML = "<img src='assets/Images/sweetTooth.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-sweettooth").css({opacity:'0.0'}); 
     enemyHealth.push(sweetTooth.enemySweetToothHealth);
     enemyAttack.push(sweetTooth.enemySweetToothAttack);
@@ -163,7 +163,7 @@ enemyArea.innerHTML = "<img src='Images/sweetTooth.JPG' width=\'170px\' height=\
     enemyAttackDisplay.innerHTML=("enemy attack:" + sweetTooth.enemySweetToothAttack); 
 }
 function buttonPress3E(){
-    enemyArea.innerHTML = "<img src='Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
+    enemyArea.innerHTML = "<img src='assets/Images/scorpion.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-scorpion").css({opacity:'0.0'}); 
     enemyHealth.push(scorpion.enemyScorpionHealth);
     enemyAttack.push(scorpion.enemyScorpionAttack);  
@@ -171,7 +171,7 @@ function buttonPress3E(){
     enemyAttackDisplay.innerHTML=("enemy attack:" + scorpion.enemyScorpionAttack); 
 }
 function buttonPress4E(){
-    enemyArea.innerHTML = "<img src='Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
+    enemyArea.innerHTML = "<img src='assets/Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
     $("#evil-liukang").css({opacity:'0.0'});  
     enemyHealth.push(liuKang.enemyLiuKangHealth);
     enemyAttack.push(liuKang.enemyLiuKangAttack);
