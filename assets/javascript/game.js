@@ -110,7 +110,7 @@ var enemyAttackDisplay = document.getElementById('enemy-attack');
 
 // function for button click to pick characters and insert into hero area
 function buttonPress1(){
-        heroArea.innerHTML = "<img src='assets/Images/raiden.JPG' width=\'170px\' height=\'145px\'>";
+        heroArea.innerHTML = "<img src='assets/Images/raiden.jpg' width=\'170px\' height=\'145px\'>";
         $(" #raiden, #scorpion, #liukang, #sweettooth, #evil-raiden").css({opacity:'0.0'});
         $(" #evil-liukang, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'});
         heroHealth.push(raiden.raidenHealth)
@@ -137,7 +137,7 @@ function buttonPress3(){
      heroAttackDisplay.innerHTML=("hero attack:" + scorpion.scorpionAttack);
 }
 function buttonPress4(){
-    heroArea.innerHTML = "<img src='assets/Images/liuKang.JPG' width=\'170px\' height=\'145px\'>";
+    heroArea.innerHTML = "<img src='assets/Images/liuKang.jpg' width=\'170px\' height=\'145px\'>";
     $("#liukang, #sweettooth, #raiden, #scorpion, #evil-liukang").css({opacity:'0.0'});
     $("#evil-raiden, #evil-sweettooth, #evil-scorpion").css({opacity:'1.0'}); 
     heroHealth.push(liuKang.liuKangHealth);
