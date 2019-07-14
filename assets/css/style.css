@@ -172,11 +172,18 @@ opacity: .6;
 }
 #hero-area{
     height: 150px;
-    width: 200px;
+    width: 400px;
 }
 #enemy-area{
     height: 150px;
-    width: 200px;
+    width: 400px;
+    margin-right: 80%;
+}
+#enemy-stats{
+    height: 150px;
+    width: 210px;
+    float: right;
+    margin-right: 70%;
 }
 .hero-text {
     text-align: center;
