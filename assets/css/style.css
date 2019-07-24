@@ -67,7 +67,7 @@
       background-color:#e6080833;
   }
 #raiden{
-    background-image: url("../images/raiden.jpg");
+    background-image: url("../Images/raiden.jpg");
     height: 145px;
     width: 130px;
     box-shadow: 0 8px 16px 0 aqua, 0 6px 20px 0 rgba(34, 140, 240, 0.19);
@@ -82,7 +82,7 @@
     transform: translateY(4px);
   }
 #scorpion{
-    background-image: url("../images/scorpion.JPG");
+    background-image: url("../Images/scorpion.JPG");
     height: 145px;
     width: 130px;
     box-shadow: 0 8px 16px 0 #f0c506e7, 0 6px 20px 0 rgba(241, 139, 5, 0.836);
@@ -96,7 +96,7 @@
     transform: translateY(4px);
   }
 #sweettooth{
-    background-image: url("../images/sweetTooth.JPG");
+    background-image: url("../Images/sweetTooth.JPG");
     height: 145px;
     width: 130px;
     box-shadow: 0 8px 16px 0 rgba(6, 216, 34, 0.897), 0 6px 20px 0 rgba(73, 156, 57, 0.884);
@@ -110,7 +110,7 @@ opacity: .6;
     transform: translateY(4px);
   }
 #liukang{
-    background-image: url("../images/liuKang.jpg");
+    background-image: url("../Images/liuKang.jpg");
     height: 145px;
     width: 130px;
     box-shadow: 0 8px 16px 0 #f30303ea, 0 6px 20px 0 rgba(243, 6, 6, 0.979);
