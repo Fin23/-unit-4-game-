@@ -66,7 +66,7 @@
       color:aqua;
       background-color:#e6080833;
   }
-#raiden{
+.raiden{
     background-image: url(../Images/raiden.jpg);
     height: 145px;
     width: 130px;
@@ -99,7 +99,7 @@
     background-image: url(../Images/sweetTooth.JPG);
     height: 145px;
     width: 130px;
-    box-shadow: 0 8px 16px 0 rgba(6, 216, 34, 0.897), 0 6px 20px 0 rgba(51, 236, 14, 0.884);
+    box-shadow: 0 8px 16px 0 rgba(6, 216, 34, 0.897), 0 6px 20px 0 rgba(73, 156, 57, 0.884);
 }
 #sweettooth:hover{
 opacity: .6;
